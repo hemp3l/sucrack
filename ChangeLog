@@ -1,0 +1,65 @@
+2007-09-21  Nico Leidecker  <nico@leidecker.info>
+
+	* VERSION:
+	    - Version set to 1.2.3
+	
+	* src/dictionary.c, src/sucrack.c:
+	    - reading passwords from stdin supported
+	    
+	* src/sucrack.c:
+	    - reject running sucrack root
+	    
+	* README, doc/sucrack.1:
+	    - updated
+
+2007-04-24  Nico Leidecker  <nico@leidecker.info>
+
+	* VERSION:
+	    - Version set to 1.2.2.
+	    - sucrack ported and tested on NetBSD
+	    
+	* configure.ac:
+	    - OS detection added
+
+	* src/pty: 
+	    - poll() bug fixed
+
+	* README: 
+	    - updated
+
+2007-04-02  Nico Leidecker  <nico@leidecker.info>
+
+	* VERSION:
+	    - Version set to 1.2.1.
+	
+	* configure.ac:
+	    - Static linking is now optional
+
+	* doc/sucrack.1:
+	    - Manpage added
+
+	* README:
+	    - updated
+
+2007-02-15  Nico Leidecker  <nico@leidecker.info>
+
+	* VERSION:
+	    - Version set to 1.1.
+	
+	* src/Makefile.am:
+	    - Modification for static linking
+
+	* configure.ac, src/dictionary.c, src/su.c, src/worker.c, src/sucrack.c,
+	  src/rewriter.c, src/stat.c, src/dictionary.h, src/su.h, src/worker.h, 
+	  src/sucrack.h, src/rewriter.h, src/stat.h:
+	    - Extra compile arguments and preprocessor directives
+	      for dictionary buffer type added.
+	    - Statistics are optional by configuration flag
+	    - Minimalistic statistics/progress added
+	
+	* README:
+	    - updated
+
+2006-01-03  Nico Leidecker <nico@leidecker.info>
+
+	* First release of version 1.0.
