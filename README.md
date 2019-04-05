@@ -1,4 +1,4 @@
-![Logo] (http://leidecker.info/common/images/sucrack.png)
+![Logo](http://leidecker.info/common/images/sucrack.png)
 
 # sucrack - the su cracker
 
