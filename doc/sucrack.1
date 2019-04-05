@@ -1,0 +1,105 @@
+.TH SUCRACK 1 "Version 1.2.3"
+
+.SH NAME
+.B sucrack
+is a multithreaded Linux/UNIX tool for brute-force cracking of local user accounts via su.
+
+.SH SYNOPSIS
+.B sucrack 
+[options] wordlist 
+
+.SH DESCRIPTION
+.B sucrack
+is a multithreaded Linux/UNIX tool brute-force cracking tool that drives su(1) with referencing a specific user and uses words from a wordlist as passwords. Running 
+.B sucrack
+does not require high privileges on the target system.
+
+.SH OPTIONS
+.PP
+.B sucrack
+allows reading passwords from stdin. In that case, use '-' instead of a filename as wordlist parameter.
+.TP
+.B Common options:
+.TP
+.I -h
+print help message
+.TP
+.I -a
+use ansi escape codes for nice looking statistics (requires --enable-statistics configuration flag)
+.TP
+.I -s <seconds>
+statistics display intervall (requires --enable-statistics configuration flag)
+.TP
+.I -c
+only print statistics if a key other than `q' is pressed
+.TP
+.I -r
+enable rewriting of dictionary words (see rules below)
+.TP
+.I -w <num>
+number of threads to run with.
+.TP
+.I -b <size>
+size of the word list buffer
+.TP
+.I -u <user>
+user account to su to
+.TP
+.I -l <rules>
+specify certain rules for the rewriting process
+.PP
+.TP
+.B Rewriting rules:
+.TP
+.I A
+Rewrite word with only upper case characters
+.TP
+.I F
+Rewrite word with first character as upper case
+.TP
+.I L
+Rewrite word with last character as upper case
+.TP
+.I a
+Rewrite word with only lower case characters
+.TP
+.I f
+Rewrite word with first character as lower case
+.TP
+.I l
+Rewrite word with last character as lower case
+.TP
+.I D
+Prepend each digit (0-9) to the word
+.TP
+.I d
+Append each digit (0-9) to the word
+.TP
+.I e
+enleet the word 
+.TP
+.I x
+apply all rules to a word
+
+.SH ENVIRONMENT VARIABLES
+.PP
+.TP
+.I SUCRACK_SU_PATH
+The path to su (usually /bin/su or /usr/bin/su)
+.TP
+.I SUCRACK_AUTH_FAILURE
+The message su returns on an authentication failure (like "su: Authentication failure" or "su: Sorry")
+.TP
+.I SUCRACK_AUTH_SUCCESS
+The message that indicates an authentication success. This message must not be a password listed in the wordlist (default is "SUCRACK_SUCCESS")
+
+.SH AUTHOR
+.PP
+.TP
+Nico Leidecker <nfl@portcullis-security.com>
+http://www.leidecker.info
+
+.SH SEE ALSO
+.PP
+.TP
+.B su(1)
