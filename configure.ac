@@ -18,7 +18,7 @@ AC_PROG_CC
 # Checks for header files.
 AC_HEADER_STDC
 AC_HEADER_SYS_WAIT
-AC_CHECK_HEADERS([fcntl.h stdlib.h string.h sys/ioctl.h unistd.h])
+AC_CHECK_HEADERS([fcntl.h stdlib.h string.h sys/ioctl.h unistd.h pthread.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
 AC_C_CONST
@@ -50,7 +50,7 @@ AC_ARG_ENABLE(statistics,
 
 
 
-SUCRACK_LINK_FLAGS="-lpthread"
+SUCRACK_LINK_FLAGS="-pthread"
 AC_ARG_ENABLE(static-linked,
 	[  --enable-static-linked	   link sucrack staticly], SUCRACK_LINK_FLAGS="-static -pthread")
 
