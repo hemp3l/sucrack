@@ -4,7 +4,7 @@
 AC_PREREQ(2.50)
 AC_INIT(sucrack, 1.2.3, nico@leidecker.info)
 
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([subdir-objects foreign])
 
 AC_CANONICAL_TARGET
 
