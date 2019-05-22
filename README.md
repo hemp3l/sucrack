@@ -8,7 +8,7 @@ sucrack is a multithreaded Linux/UNIX tool for brute-force cracking local user a
 Many su implementations require a pseudo terminal to be attached in order to take the password from the user. This is why you couldn't just use a simple shell script and pipe the password from STDIN. 
 This tool, written in C, is highly efficient and can attempt multiple logins at the same time. Please be advised that using this tool will take a lot of the CPU performance and fill up the logs quite quickly. 
 
-sucrack is so far known to be running on FreeBSD, NetBSD, Linux
+sucrack is so far known to be running on FreeBSD, NetBSD, Linux.
  
  ## Installation
 
